@@ -1,0 +1,11 @@
+extends base
+
+block content
+  ul(class='articles')
+    each post in page.posts.toArray()
+      li
+        article(class='article')
+          h1
+            a(href=url_for(post.path)) #{post.title}
+          include _partial/post_footer
+          +post_footer(post)

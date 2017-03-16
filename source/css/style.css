@@ -1,0 +1,489 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font-family: 'Crimson Text', Georgia, "Nimbus Roman No9 L", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header > * {
+  display: inline-block;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  margin-top: 28px;
+  font-size: 150%;
+  font-weight: 500;
+}
+
+header h1 a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+header nav {
+  float: right;
+  margin-top: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  list-style-image: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  margin: 0 10px;
+  font-size: 94%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+header nav ul li a.active {
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.6);
+  padding-bottom: 2px;
+}
+
+body > ul.articles {
+  flex: 1;
+  max-width: 640px;
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  text-align: center;
+  list-style: none;
+  list-style-image: none;
+}
+
+body > ul.articles article.article h1 {
+  font-size: 125%;
+  font-weight: 500;
+  margin: 60px 0px 0px;
+}
+
+body > ul.articles article.article h1 > a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+body > ul.articles article.article footer {
+  margin-top: 15px;
+}
+
+body > ul.articles article.article footer time {
+  font-size: 81%;
+}
+
+body > ul.articles article.article footer ul.tags li {
+  line-height: 15px;
+}
+
+article.article {
+  flex: 1;
+  max-width: 640px;
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article.article > h1, article.article > h2, article.article > h3,
+article.article > h4, article.article > h5, article.article > h6 {
+  margin: 35px 0px;
+  font-weight: 700;
+}
+
+article.article > h1 {
+  font-size: 29px;
+}
+
+article.article > h2 {
+  font-size: 26px;
+}
+
+article.article > h3 {
+  font-size: 22px;
+}
+
+article.article > h4 {
+  font-size: 18px;
+}
+
+article.article > h5 {
+  font-size: 16px;
+}
+
+article.article > h6 {
+  font-size: 14px;
+}
+
+article.article > h1.title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 120px 0;
+}
+
+article.article p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  margin: 35px 0px 0px;
+}
+
+article.article > p a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.3s;
+}
+
+article.article > p a:hover {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.6);
+}
+
+article.article img {
+  max-width: 100%;
+}
+
+article.article > p > img:only-child {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article.article > blockquote {
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%;
+}
+
+article.article > blockquote p {
+  font-size: 16px;
+}
+
+article.article > p code {
+  font-family: Courier, monospace;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 2px 3px;
+  border-radius: 5%;
+}
+
+article.article > figure.highlight {
+  font-family: Courier, monospace;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 35px 0px 0px;
+  overflow-x: scroll;
+}
+
+article.article > figure.highlight figcaption {
+  font-family: 'Crimson Text', Georgia, "Nimbus Roman No9 L", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  color: #333;
+}
+
+article.article > figure.highlight .gutter {
+  padding-right: 20px;
+}
+
+article.article > figure.highlight .line {
+  min-height: 18px;
+}
+
+article.article li {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+article.article > ol, article ul {
+  margin-top: 35px;
+}
+
+article.article > hr {
+  height: 1px;
+  width: 60px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-width: 0px;
+}
+
+article.article > footer {
+  margin-top: 60px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+article.article > footer ul {
+  padding-left: 0px;
+  margin-top: 15px;
+  list-style: none;
+  list-style-image: none;
+}
+
+article.article > footer ul li {
+  display: inline-block;
+}
+
+article.article > footer a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 5px;
+}
+
+article.article > footer a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+article.article > footer ul.tags a:before {
+  content: "#";
+}
+
+article.article > footer .admin {
+  float: right;
+}
+
+body > footer {
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-top: 60px;
+}
+
+body > footer article {
+  max-width: 640px;
+  padding: 35px 0px;
+  margin: 0px auto;
+}
+
+body > footer article h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+body > footer article h1 a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+body > footer article p.description {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  margin: 0px;
+}
+
+body > footer article p.wasabi {
+  margin-top: 35px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+body > footer article p.wasabi a {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+body > footer article p.wasabi a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#disqus_thread {
+  margin-top: 35px;
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    width: calc(100% - 20px);
+  }
+
+  article.article, body > footer {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  article.article h1.title {
+    font-size: 28px;
+    margin: 80px 0;
+  }
+
+  article.article h1, article.article h2, article.article h3,
+  article.article h4, article.article h5, article.article h6 {
+    margin: 20px 0px;
+  }
+
+  article.article h1 {
+    font-size: 26px;
+  }
+
+  article.article h2 {
+    font-size: 22px;
+  }
+
+  article.article h3 {
+    font-size: 20px;
+  }
+
+  article.article h4 {
+    font-size: 18px;
+  }
+
+  article.article h5 {
+    font-size: 16px;
+  }
+
+  article.article h6 {
+    font-size: 14px;
+  }
+
+  article.article p, article.article li {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0px 0px;
+  }
+
+  article.article blockquote p {
+    font-size: 15px;
+  }
+
+  article.article code {
+    font-family: Courier, monospace;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 2px 3px;
+    border-radius: 5%;
+  }
+
+  article.article pre {
+    font-family: Courier, monospace;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 20px 0px 0px;
+  }
+
+  article.article ol, article ul {
+    margin-top: 20px;
+  }
+
+  article.article > footer, article.article > footer ul li a {
+    font-size: 14px;
+  }
+
+  body > footer {
+    text-align: center;
+  }
+
+  body > footer article {
+    padding: 20px 0px;
+  }
+
+  body > footer article p.wasabi .admin {
+    float: none;
+  }
+
+  body > footer article p.wasabi .admin a {
+    margin-right: 0px;
+  }
+
+  body > footer article p.wasabi .admin a:before {
+    content: ' | ';
+  }
+}
+
+pre .comment {
+  color: #998;
+  font-style: italic;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #333;
+  font-weight: bold;
+}
+pre .number,
+pre .literal,
+pre .variable {
+  color: #008080;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #d14;
+}
+pre .title {
+  color: #900;
+  font-weight: bold;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #458;
+  font-weight: bold;
+}
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #000080;
+  font-weight: normal;
+}
+pre .preprocessor,
+pre .built_in,
+pre .params,
+pre .constant {
+  color: #0086b3;
+}
+pre .css .hexcolor {
+  color: #6cc;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #69c;
+}

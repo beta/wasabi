@@ -1,0 +1,8 @@
+mixin post_footer(post)
+  footer
+    time(datetime=date_xml(post.date)) #{date(post.date, date_format)}
+    ul(class='tags')
+      if post.tags && post.tags.length > 0
+        each tag in post.tags.toArray()
+          li
+            a(href=url_for(tag.path)) #{tag.name}

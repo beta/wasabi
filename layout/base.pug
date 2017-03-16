@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href=config.root + 'css/style.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Crimson+Text')
+    title #{config.title}
+
+  body
+    header
+      h1
+        a(href=config.root) #{config.title}
+    block content
+    footer
+      article
+        h1 #{config.title}
+        p(class='description') #{config.description}
+        p(class='wasabi')
+          | Powered by <a href="https://hexo.io/">Hexo</a>. <a href="https://github.com/beta/wasabi">Wasabi</a> theme by <a href="http://kyouko.net/">beta</a>.
