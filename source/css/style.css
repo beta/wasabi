@@ -152,15 +152,7 @@ article.article > h1.title {
   margin: 120px 0;
 }
 
-article.article p {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 35px;
-  margin: 35px 0px 0px;
-}
-
-article.article > p a {
+article.article a {
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
@@ -168,8 +160,16 @@ article.article > p a {
   transition: border-color 0.3s;
 }
 
-article.article > p a:hover {
+article.article a:hover {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.6);
+}
+
+article.article p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  margin: 35px 0px 0px;
 }
 
 article.article img {
@@ -263,6 +263,8 @@ article.article > footer a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
   margin-right: 5px;
+  border-bottom: none;
+  padding-bottom: 0px;
 }
 
 article.article > footer a:hover {
