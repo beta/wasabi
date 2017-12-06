@@ -194,7 +194,7 @@ article.article > blockquote p {
   font-size: 16px;
 }
 
-article.article > p code {
+article.article code {
   font-family: Courier, monospace;
   font-size: 13px;
   background: rgba(0, 0, 0, 0.03);
