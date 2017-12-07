@@ -196,7 +196,7 @@ article.article > blockquote p {
 
 article.article code {
   font-family: Courier, monospace;
-  font-size: 13px;
+  font-size: 14px;
   background: rgba(0, 0, 0, 0.03);
   padding: 2px 3px;
   border-radius: 5%;
@@ -382,7 +382,7 @@ body > footer article p.wasabi a:hover {
 
   article.article code {
     font-family: Courier, monospace;
-    font-size: 12px;
+    font-size: 13px;
     background: rgba(0, 0, 0, 0.03);
     padding: 2px 3px;
     border-radius: 5%;
