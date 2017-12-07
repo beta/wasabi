@@ -202,6 +202,22 @@ article.article code {
   border-radius: 5%;
 }
 
+article.article .gist {
+  display: inline-block;
+}
+
+article.article .gist .gist-file {
+  margin-bottom: 0;
+}
+
+article.article .gist .gist-data {
+  border-bottom: none;
+}
+
+article.article .gist .gist-meta {
+  display: none;
+}
+
 article.article > figure.highlight {
   font-family: Courier, monospace;
   font-size: 15px;
