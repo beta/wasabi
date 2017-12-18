@@ -1,0 +1,6 @@
+mixin paginator(page)
+  div(class='paginator')
+    if page.prev > 0
+      a(class='prev' href=url_for(page.prev_link)) &lt; Prev
+    if page.next > 0
+      a(class='next' href=url_for(page.next_link)) Next &gt;

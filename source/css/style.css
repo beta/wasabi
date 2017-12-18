@@ -72,13 +72,16 @@ header nav ul li a.active {
   padding-bottom: 2px;
 }
 
-body > ul.articles {
+body > ul.articles, body > .paginator {
   flex: 1;
   max-width: 640px;
   width: calc(100% - 20px);
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
+}
+
+body > ul.articles {
   text-align: center;
   list-style: none;
   list-style-image: none;
@@ -339,6 +342,30 @@ body > footer article p.wasabi a:hover {
 
 #disqus_thread {
   margin-top: 35px;
+}
+
+body > .paginator {
+  margin-top: 40px;
+}
+
+body > .paginator a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.3s;
+}
+
+body > .paginator a:hover {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.6);
+}
+
+body > .paginator a.prev {
+  float: left;
+}
+
+body > .paginator a.next {
+  float: right;
 }
 
 @media only screen and (max-width: 980px) {

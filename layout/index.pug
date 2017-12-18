@@ -9,3 +9,5 @@ block content
             a(href=url_for(post.path)) #{post.title}
           include _partial/post_footer
           +post_footer(post)
+  include _partial/paginator
+  +paginator(page)
