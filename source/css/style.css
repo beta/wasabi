@@ -226,7 +226,7 @@ article.article > figure.highlight {
   font-size: 15px;
   line-height: 25px;
   margin: 35px 0px 0px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 article.article > figure.highlight figcaption {
