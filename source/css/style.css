@@ -19,7 +19,7 @@ a {
 header {
   height: 80px;
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -112,15 +112,19 @@ body > ul.articles article.article footer ul.tags li {
 
 article.article {
   flex: 1;
+}
+
+article.article > h1, article.article > h2, article.article > h3,
+article.article > h4, article.article > h5, article.article > h6,
+article.article > p, article.article > ul, article.article > ol,
+article.article > div {
+  width: 100%;
   max-width: 640px;
-  width: calc(100% - 20px);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 35px auto;
 }
 
 article.article > h1, article.article > h2, article.article > h3,
 article.article > h4, article.article > h5, article.article > h6 {
-  margin: 35px 0px;
   font-weight: 700;
 }
 
@@ -152,7 +156,7 @@ article.article > h1.title {
   text-align: center;
   font-size: 34px;
   font-weight: 500;
-  margin: 120px 0;
+  margin: 120px auto;
 }
 
 article.article a {
@@ -167,16 +171,17 @@ article.article a:hover {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.6);
 }
 
-article.article p {
+article.article > p, article.article > ol, article.article > ul {
   color: rgba(0, 0, 0, 0.8);
   font-size: 18px;
   font-weight: 400;
   line-height: 35px;
-  margin: 35px 0px 0px;
 }
 
 article.article img {
-  max-width: 100%;
+  max-width: 640px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 article.article > p > img:only-child {
@@ -198,7 +203,7 @@ article.article > blockquote p {
 }
 
 article.article code {
-  font-family: Courier, monospace;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.03);
   padding: 2px 3px;
@@ -222,11 +227,21 @@ article.article .gist .gist-meta {
 }
 
 article.article > figure.highlight {
-  font-family: Courier, monospace;
-  font-size: 15px;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
   line-height: 25px;
-  margin: 35px 0px 0px;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.03);
+  margin: 35px auto;
   overflow-x: auto;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+article.article > figure.highlight > table {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow-x: scroll;
 }
 
 article.article > figure.highlight figcaption {
@@ -239,7 +254,19 @@ article.article > figure.highlight .gutter {
 }
 
 article.article > figure.highlight .line {
+  font-size: 15px;
   min-height: 18px;
+}
+
+article.article > figure.highlight td.code {
+  padding: 0;
+  overflow: hidden;
+}
+
+article.article > figure.highlight td.code > pre {
+  width: 640px;
+  overflow-x: auto;
+  line-height: 25px;
 }
 
 article.article li {
@@ -247,7 +274,8 @@ article.article li {
   line-height: 35px;
 }
 
-article.article > ol, article ul {
+article.article > ol, article.article > ul {
+  max-width: 600px;
   margin-top: 35px;
 }
 
@@ -261,7 +289,8 @@ article.article > hr {
 }
 
 article.article > footer {
-  margin-top: 60px;
+  margin: 60px auto 0;
+  max-width: 640px;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -368,77 +397,120 @@ body > .paginator a.next {
   float: right;
 }
 
-@media only screen and (max-width: 980px) {
-  header {
-    width: calc(100% - 20px);
+@media only screen and (max-width: 660px) {
+  header, footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% - 40px);
   }
 
-  article.article, body > footer {
-    padding: 0 10px;
+  article.article > h1, article.article > h2, article.article > h3,
+  article.article > h4, article.article > h5, article.article > h6,
+  article.article > p, article.article > ul, article.article > ol,
+  article.article > div, article.article > figure, article.article > footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: inherit;
+  }
+
+  article.article > ol, article.article > ul {
+    padding-left: 60px;
+    margin-top: 20px;
+    max-width: calc(100% - 80px);
+  }
+
+  article.article > figure.highlight td.code > pre {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media only screen and (max-width: 500px) {
+  header, footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+  }
+
   article.article h1.title {
     font-size: 28px;
     margin: 80px 0;
   }
 
-  article.article h1, article.article h2, article.article h3,
-  article.article h4, article.article h5, article.article h6 {
+  article.article > h1, article.article > h2, article.article > h3,
+  article.article > h4, article.article > h5, article.article > h6,
+  article.article > p, article.article > ul, article.article > ol,
+  article.article > div, article.article > figure, article.article > footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: inherit;
+  }
+
+  article.article > ol, article.article > ul {
+    padding-left: 30px;
+    max-width: calc(100% - 50px);
+  }
+
+  article.article > h1, article.article > h2, article.article > h3,
+  article.article > h4, article.article > h5, article.article > h6 {
     margin: 20px 0px;
   }
 
-  article.article h1 {
+  article.article > h1 {
     font-size: 26px;
   }
 
-  article.article h2 {
+  article.article > h2 {
     font-size: 22px;
   }
 
-  article.article h3 {
+  article.article > h3 {
     font-size: 20px;
   }
 
-  article.article h4 {
+  article.article > h4 {
     font-size: 18px;
   }
 
-  article.article h5 {
+  article.article > h5 {
     font-size: 16px;
   }
 
-  article.article h6 {
+  article.article > h6 {
     font-size: 14px;
   }
 
-  article.article p, article.article li {
+  article.article > p, article.article > ul li, article.article > ol li {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 30px;
     margin: 20px 0px 0px;
   }
 
-  article.article blockquote p {
+  article.article > figure.highlight td.code > pre {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  article.article > figure.highlight .line {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  article.article > blockquote p {
     font-size: 15px;
   }
 
   article.article code {
-    font-family: Courier, monospace;
     font-size: 13px;
-    background: rgba(0, 0, 0, 0.03);
-    padding: 2px 3px;
-    border-radius: 5%;
   }
 
-  article.article pre {
-    font-family: Courier, monospace;
+  article.article > pre {
     font-size: 14px;
-    line-height: 25px;
-    margin: 20px 0px 0px;
   }
 
-  article.article ol, article ul {
+  article.article > ol, article.article > ul {
     margin-top: 20px;
   }
 
