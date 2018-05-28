@@ -117,7 +117,7 @@ article.article {
 article.article > h1, article.article > h2, article.article > h3,
 article.article > h4, article.article > h5, article.article > h6,
 article.article > p, article.article > ul, article.article > ol,
-article.article > div {
+article.article > div, article.article > blockquote {
   width: 100%;
   max-width: 640px;
   margin: 35px auto;
@@ -195,7 +195,7 @@ article.article > blockquote {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 90%;
+  max-width: 576px;
 }
 
 article.article > blockquote p {
@@ -407,10 +407,15 @@ body > .paginator a.next {
   article.article > h1, article.article > h2, article.article > h3,
   article.article > h4, article.article > h5, article.article > h6,
   article.article > p, article.article > ul, article.article > ol,
-  article.article > div, article.article > figure, article.article > footer {
+  article.article > div, article.article > figure, article.article > blockquote,
+  article.article > footer {
     padding-left: 20px;
     padding-right: 20px;
     width: inherit;
+  }
+
+  article.article > blockquote {
+    width: 90%;
   }
 
   article.article > ol, article.article > ul {
@@ -441,7 +446,8 @@ body > .paginator a.next {
   article.article > h1, article.article > h2, article.article > h3,
   article.article > h4, article.article > h5, article.article > h6,
   article.article > p, article.article > ul, article.article > ol,
-  article.article > div, article.article > figure, article.article > footer {
+  article.article > div, article.article > figure, article.article > blockquote,
+  article.article > footer {
     padding-left: 10px;
     padding-right: 10px;
     width: inherit;
@@ -496,6 +502,10 @@ body > .paginator a.next {
   article.article > figure.highlight .line {
     font-size: 13px;
     line-height: 22px;
+  }
+
+  article.article > blockquote {
+    width: 90%;
   }
 
   article.article > blockquote p {
