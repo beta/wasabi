@@ -9,7 +9,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  font-family: 'Average', Georgia, "Nimbus Roman No9 L", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-family: 'Crimson Pro', Georgia, "Nimbus Roman No9 L", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+}
+
+strong {
+  font-weight: 600;
 }
 
 a {
@@ -35,7 +39,7 @@ header a {
 header h1 {
   margin-top: 28px;
   font-size: 150%;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 header h1 a {
@@ -89,7 +93,7 @@ body > ul.articles {
 
 body > ul.articles article.article h1 {
   font-size: 125%;
-  font-weight: 500;
+  font-weight: 400;
   margin: 60px 0px 0px;
 }
 
@@ -125,7 +129,7 @@ article.article > div, article.article > blockquote {
 
 article.article > h1, article.article > h2, article.article > h3,
 article.article > h4, article.article > h5, article.article > h6 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 article.article > h1 {
@@ -155,7 +159,7 @@ article.article > h6 {
 article.article > h1.title {
   text-align: center;
   font-size: 34px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 120px auto;
 }
 
@@ -340,7 +344,7 @@ body > footer article {
 
 body > footer article h1 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
@@ -556,7 +560,7 @@ pre .comment {
 pre .keyword,
 pre .javascript .function {
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
 }
 pre .number,
 pre .literal,
@@ -573,13 +577,13 @@ pre .xml .cdata {
 }
 pre .title {
   color: #900;
-  font-weight: bold;
+  font-weight: 600;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
   color: #458;
-  font-weight: bold;
+  font-weight: 600;
 }
 pre .attribute,
 pre .tag,
@@ -593,7 +597,7 @@ pre .css .id,
 pre .css .class,
 pre .css .pseudo {
   color: #000080;
-  font-weight: normal;
+  font-weight: 400;
 }
 pre .preprocessor,
 pre .built_in,
