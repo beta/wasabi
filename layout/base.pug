@@ -15,7 +15,7 @@ html
       nav
         ul
           if site.pages && site.pages.length > 0
-            each page in site.pages.toArray()
+            each page in site.pages.toArray().sort((a, b) => (a.order || 0) - (b.order || 0))
               li
                 if path == page.path
                   a(class='active', href=url_for(page.path)) #{page.title}
