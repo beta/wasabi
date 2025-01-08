@@ -12,6 +12,14 @@ A simple & minimal Hexo theme.
 
 [Live demo](https://betakuang.me/) (my blog)
 
+## Prerequisites
+
+Wasabi uses [Pug](https://pugjs.org/). Add `hexo-renderer-pug` to your dependencies:
+
+```bash
+npm install hexo-renderer-pug --save
+```
+
 ## Disqus
 
 To enable Disqus, add the following config to your `_config.yml`:
